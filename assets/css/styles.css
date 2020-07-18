@@ -32,8 +32,8 @@ body {
 
 .descr_window {             /* Само окно */
 
-    top: 50%;
-    left: 50%;
+    top: 30%;
+    left: 30%;
     border: 1px solid black;
     position: absolute;
     margin-left: auto;
