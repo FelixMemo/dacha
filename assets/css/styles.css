@@ -31,13 +31,14 @@ body {
 
 .descr_window {             /* Само окно */
     border: 1px solid black;
+    position: absolute;
     display: none;  /* невидимое по умолчанию */
     justify-content: center;
     flex-direction: column;
 }
 
 .descr_window:hover {     /* при удержании курсора */
-    position: static;
+    
     display: flex;                      /* продолжает быть видимым */
 }
 
