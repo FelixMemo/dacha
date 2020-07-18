@@ -32,24 +32,29 @@ body {
 .descr_window {             /* Само окно */
     border: 1px solid black;
     position: absolute;
+    margin-left: auto;
+    margin-right: auto;
     display: none;  /* невидимое по умолчанию */
     justify-content: center;
     flex-direction: column;
+    width: 200px;
+    align-self: center;
 }
 
-.descr_window:hover {     /* при удержании курсора */
+/* .descr_window:hover {     
     
-    display: flex;                      /* продолжает быть видимым */
-}
+    display: block;                     
+} */
 
-.descr_title {
+.desc_tit {
+    width: 100%;
     text-align: center;
     text-transform: uppercase;
     font-size: 26px;
 }
 
 .descr_photo {
-    width: 100px;
+    width: 100%;
 }
 
 
@@ -65,8 +70,12 @@ body {
     
 }
 
-.plant_box:active .descr_window {      /* при клике на обертку */
-    display: flex;             /* всплывающее окно становится видимым */
+/* .plant_box:active .descr_window {      
+    display: flex;             
+} */
+
+.plant_box:hover .descr_window {
+    display: flex;
 }
 
 
@@ -74,16 +83,16 @@ body {
 .bush {         
     display: flex;
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 70px;
+    height: 70px;
     margin-bottom: 10px;
 }
 
 .tree {
     display: flex;
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 70px;
+    height: 70px;
     margin-bottom: 10px;
 }
 
