@@ -6,8 +6,8 @@ body {
 
 /* основные элементы*/
 
-.field {
-    width: 95%;
+.field {                /* участок */
+    width: 90%;
     max-width: 1630px;
     padding-top: 30px;
     padding-left: 30px;
@@ -16,9 +16,10 @@ body {
     background-color: #62DA97;
     margin-left: 15px;
     margin-right: 15px;
+    z-index: 1;
 }
 
-.container {
+.container {            /* контейнер для груп растений */
     display: flex;
     
     justify-content: space-between;
@@ -27,7 +28,7 @@ body {
 }
 
 
-/* Всплывающее окно */
+/* Пояснительное окно */
 
 .descr_window {             /* Само окно */
 
@@ -40,20 +41,19 @@ body {
     display: none;  /* невидимое по умолчанию */
     justify-content: center;
     flex-direction: column;
-    width: 200px;
-    align-self: center;
+    width: 400px;
+    z-index: 9999;
+    background-color: #fff;
+ 
 }
 
-/* .descr_window:hover {     
-    
-    display: block;                     
-} */
 
-.desc_tit {
+.desc_tit {             /* заголовок пояснительного окна */
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    font-size: 26px;
+    font-size: 50px;
+    z-index: 9999;
 }
 
 .descr_photo {
@@ -64,39 +64,38 @@ body {
 
 /* Растения */
 
-.plant_box {           /* обертка для иконки */ 
-    /* margin-left: 4px;
-    margin-right: 4px; */
+.plant_box {           /* блок растения */ 
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     
 }
 
-/* .plant_box:active .descr_window {      
-    display: flex;             
-} */
 
-.plant_box:hover .descr_window {
-    display: flex;
-}
+
+.plant_box:hover .descr_window {    /* при наведении на блок растения */
+    display: flex;                  /* пояснительное окно видимеет */
+}   
 
 
 
-.bush {         
+.bush {                 /* стили для куста */
     display: flex;
     position: relative;
     width: 70px;
     height: 70px;
     margin-bottom: 10px;
+    z-index: 1;
 }
 
-.tree {
+.tree {              /* стили для дерева */ /* надо объединить с кустом */
     display: flex;
     position: relative;
     width: 70px;
     height: 70px;
     margin-bottom: 10px;
+    z-index: 1;
 }
 
 .plant_text {  /* подписи к иконкам */
